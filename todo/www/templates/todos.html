@@ -1,0 +1,26 @@
+<ion-view view-title="Todo">
+    <ion-nav-buttons side="left">
+        <button translate class="button button-clear button-positive button-small" ng-click="tlc.signOut()">
+            signout
+        </button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-clear button-positive button-small" ng-click="tlc.toggleLang()">
+            Language
+        </button>
+        <button translate class="button button-clear button-positive button-small" ng-click="tlc.openAddTodoModal()">
+            add
+        </button>
+    </ion-nav-buttons>
+    <ion-content>
+        <ion-list show-delete="false">
+            <ion-item ng-click="tlc.openEditTodoModal(todo)" item-height="52px" item-width="100%" collection-repeat="todo in tlc.todos | orderBy : '-createdDate'">
+                <list-two-item text1="todo.content" text2="todo.createdDate"></list-two-item>
+                <ion-option-button class="button-assertive" ng-click="tlc.deleteTodo(todo)">Delete</ion-option-button>
+            </ion-item>
+        </ion-list>
+        <div class="padding text-center" ng-if="!tlc.todos.length">
+            You have no todo :)
+        </div>
+    </ion-content>
+</ion-view>

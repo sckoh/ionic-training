@@ -23,10 +23,10 @@ public class User implements Serializable {
 	@GeneratedValue
 	private Long id;
 
-	@Column(unique = true)
+	@Column(unique = true, nullable = false)
 	private String username;
 
-	@Column
+	@Column(nullable = false)
 	@JsonIgnore
 	private String password;
 

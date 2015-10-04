@@ -18,4 +18,5 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			throws Exception {
 		auth.userDetailsService(userDetailsService);
 	}
+
 }

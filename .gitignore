@@ -8,3 +8,8 @@ mvnw
 mvnw.cmd
 .settings
 .mvn
+.editorconfig
+npm-debug.log
+todo/hooks
+todo/www/lib
+todo/.idea

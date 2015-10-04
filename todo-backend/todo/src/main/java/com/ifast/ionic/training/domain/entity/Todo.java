@@ -27,10 +27,10 @@ public class Todo implements Serializable {
 	@JoinColumn(name = "USER_ID")
 	private User user;
 
-	@Column
+	@Column(nullable = false)
 	private String content;
 
-	@Column
+	@Column(nullable = false)
 	private Date createdDate;
 
 	public Long getId() {

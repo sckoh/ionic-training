@@ -1,0 +1,21 @@
+<ion-modal-view ng-controller="TodoCtrl as tc">
+    <ion-header-bar class="bar-stable">
+        <h1 class="title">{{tc.service.saveMode}}</h1>
+        <div class="button button-clear" ng-click="tlc.closeTodoModal()"><span class="icon ion-ios-close-empty"></span></div>
+    </ion-header-bar>
+    <ion-content>
+        <form name="todoForm" novalidate ng-submit="todoForm.$valid && tc.saveTodo(tc.service.todo, todoForm)">
+            <div class="list">
+                <label class="item item-input" ng-class="{ 'has-error' : todoForm.content.$invalid  && todoForm.$submitted}">
+                    <textarea class="ta-content" name="content" placeholder="Todo" ng-model="tc.service.todo.content" required></textarea>
+                </label>
+                <div class="form-errors" ng-show="todoForm.content.$invalid && todoForm.$submitted" ng-messages="todoForm.content.$error">
+                    <div ng-messages-include="form-errors.html"></div>
+                </div>
+            </div>
+            <div class="padding">
+                <button class="button button-block button-positive" type="submit">Save</button>
+            </div>
+        </form>
+    </ion-content>
+</ion-modal-view>

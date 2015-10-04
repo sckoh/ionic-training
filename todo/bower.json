@@ -1,0 +1,13 @@
+{
+  "name": "Todo",
+  "private": "true",
+  "devDependencies": {},
+  "dependencies": {
+    "angular-messages": "~1.4.3",
+    "angular-translate": "~2.8.1",
+    "angular-translate-loader-partial": "~2.8.1",
+    "ionic": "driftyco/ionic-bower#1.1.0",
+    "ngstorage": "~0.3.9",
+    "todo-login": "https://github.com/sckoh/todo-login.git"
+  }
+}
